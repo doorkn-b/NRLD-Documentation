@@ -66,5 +66,52 @@ combined_data.to_excel(output_file_path, index=False, engine='xlsxwriter')
 print("Combined Excel file saved:", output_file_path)
 ```
 
+## Modifying the Our Result for GIS.
+
+We now have a combined file with the list of all the dams. Change the serialing accordingly.
+
+The Registry contains a few missing/wrong coordinates for the dams. Even some with a 000 DMT coordinate. Fix these manually.
+
+### Converting the Lat-Longs from Degree-Minute-Second to Floating Point Coordinates for our GIS software to read.
+We will do this in excel itself. Make a new excel file and copy the Latitude and Longitude columns into them. We will work in this before transferring it to the original file.
+
+First, the format of the coordinate will be in-- X° Y' Z"-- format. Example- 11° 34' 19".
+
+We will first split these three into seperate cells next to each other to perform our calculations. 
+
+Use these formulas to separate them. Considering A3 is the cell our DMS coordinate is present in.
+For X
+```
+=LEFT(A3, FIND("°", A3) - 1)
+```
+
+For Y
+```
+=MID(A3, FIND("°", A3) + 2, FIND("'", A3) - FIND("°", A3) - 2)
+```
+
+For Z
+```
+=MID(A3, FIND("'", A3) + 2, FIND("""", A3) - FIND("'", A3) - 2)
+```
+
+Apply this to all the coordinates. Our sheet should look something like this.
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Split%20into%20cells.png)
+
+Once done, apply the formula that will convert the coordinates to floating point decimals
+```
+=B2 + C2/60 + D2/3600
+```
+Where B2- Degree, C2- Minutes, D2- Seconds.
+
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/FinalCoord.png)
+
+Apply this formula across the entire column. Do it for both latitude and longitude. Copy and paste the values back into our original file.
+
+
+
+
+
+
 
 
