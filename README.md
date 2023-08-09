@@ -85,6 +85,7 @@ First, the format of the coordinate will be in-- X° Y' Z"-- format. Example- 11
 We will first split these three into seperate cells next to each other to perform our calculations. 
 
 Use these formulas to separate them. Considering A3 is the cell our DMS coordinate is present in.
+
 For X
 ```
 =LEFT(A3, FIND("°", A3) - 1)
