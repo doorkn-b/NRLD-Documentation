@@ -66,9 +66,13 @@ combined_data.to_excel(output_file_path, index=False, engine='xlsxwriter')
 print("Combined Excel file saved:", output_file_path)
 ```
 
-## Modifying the Our Result for GIS.
 
 We now have a combined file with the list of all the dams. Change the serialing accordingly.
+
+We can verify our count via the graph present in the registry.
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Screenshot%202023-08-07%20165815.png)
+
+## Modifying the Our Result for GIS.
 
 The Registry contains a few missing/wrong coordinates for the dams. Even some with a 000 DMT coordinate. Fix these manually.
 
@@ -124,6 +128,21 @@ Next to it in the X Field select the column containing Floating Point **Longitud
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Dialogue.png)
 
 Make sure the CRS is appropriate (EPSG: 4326 - WGS:84 in this case) and click add.
+
+## Export as shapefile
+We now have our file imported in as a Vector layer. Right click and check its attributes to make sure there has been no data loss.
+
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/atrribute.png)
+
+We will now export this as a shapefile.
+
+Right Click your Layer on the left -> Export -> Save Features as
+
+'The Save Vector Layer as' dialogue box will pop-up and we select our format, in this case, 'ESRI Shapefile' and specify the file path.
+
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/svla.png)
+
+Click OK and we have our finished shapefile.
 
 
 
