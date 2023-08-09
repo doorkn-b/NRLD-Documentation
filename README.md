@@ -4,7 +4,8 @@ Data source- [The National Register of Large Dams - 2019](https://cwc.gov.in/sit
 Pages 41-270 of the registry contains the state-wise distribution with details of each dam. 
 
 ## PDF extraction and conversion using SmallPDF.
-The required pages (Pages 41-270) containing our desired information was isolated
+The required pages (Pages 41-270) containing our desired information was isolated.
+
 Find the document [here](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Files/NRLD%20Isolated%20PDF.pdf)
 
 This document with the state-wise list was split state-wise into individual PDFs using the 'Split PDF -> Split 1 PDF into many' tool in SmallPDF.
