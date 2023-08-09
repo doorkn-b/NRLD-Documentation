@@ -89,18 +89,18 @@ Use these formulas to separate them. Considering A3 is the cell our DMS coordina
 
 
 
-For X
+For D
 
 ```
 =LEFT(A3, FIND("°", A3) - 1)
 ```
 
-For Y
+For M
 ```
 =MID(A3, FIND("°", A3) + 2, FIND("'", A3) - FIND("°", A3) - 2)
 ```
 
-For Z
+For S
 ```
 =MID(A3, FIND("'", A3) + 2, FIND("""", A3) - FIND("'", A3) - 2)
 ```
