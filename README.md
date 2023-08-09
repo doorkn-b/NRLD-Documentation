@@ -5,7 +5,9 @@ Pages 41-270 of the registry contains the state-wise distribution with details o
 
 ## PDF extraction and conversion using SmallPDF.
 The required pages were from the registry containing our desired information was isolated (Pages 41-270)
+Find the document [here](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Files/NRLD%20Isolated%20PDF.pdf)
 
-This isolated document was split state-wise into individual PDFs using the 'Split PDF -> Split 1 PDF into many' tool in SmallPDF.
+This document with the state-wise list was split state-wise into individual PDFs using the 'Split PDF -> Split 1 PDF into many' tool in SmallPDF.
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/splitsmallpdf.png)
 
 
