@@ -10,4 +10,10 @@ Find the document [here](https://github.com/doorkn-b/Shapefile-for-NRD-Documenta
 This document with the state-wise list was split state-wise into individual PDFs using the 'Split PDF -> Split 1 PDF into many' tool in SmallPDF.
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/splitsmallpdf.png)
 
+This will give us 37 individual PDFs. (29 states and 8 union territories). The PDFs of states with no dams can be ignored and deleted.
+
+These 37 individual PDFs were then converted to Excel using SmallPDF's PDF to Excel converter.
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/pdf%20to%20excel.png)
+
+
 
