@@ -114,13 +114,13 @@ Once done, apply the formula that will convert the coordinates to floating point
 ```
 Where B2- Degree, C2- Minutes, D2- Seconds.
 
-![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/FinalCoord.png)
+![](https://github.com/doorkn-b/NRLD-Documentation/blob/main/Documentation%20Images/DMS.png)
 
 Apply this formula across the entire column. Do it for both latitude and longitude. Copy and paste the values back into our original file.
 
 Save our excel file as a CSV File- (Comma delimited) (*.csv)]
 
-![**Here is the finished Excel file for reference**](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Files/NRLD.zip)
+[**Here is the finished Excel file for reference**](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Files/NRLD.zip)
 
 ## Import into GIS
 We now have our excel file ready to import into our GIS software. I will use QGIS.
