@@ -10,10 +10,14 @@ Find the document [here](https://github.com/doorkn-b/Shapefile-for-NRD-Documenta
 This document with the state-wise list was split state-wise into individual PDFs using the 'Split PDF -> Split 1 PDF into many' tool in SmallPDF.
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/splitsmallpdf.png)
 
-This will give us 37 individual PDFs. (29 states and 8 union territories). The PDFs of states with no dams can be ignored and deleted.
+This will give us 37 individual PDFs. (29 states and 8 union territories). 
 
-These 37 individual PDFs were then converted to Excel using SmallPDF's PDF to Excel converter.
+These state-wise PDFs were then converted to Excel using SmallPDF's PDF to Excel converter.
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/pdf%20to%20excel.png)
+
+Download and move all the excel files into the folder. 
+
+Go through each excel file and remove any discrepancies created during the conversion to excel. Retain the excel file with only the table. States with no dams listed can be deleted and ignored.
 
 
 
