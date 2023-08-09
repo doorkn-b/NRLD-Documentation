@@ -25,6 +25,46 @@ Add a column stating the dam's State/UT. States with no dams listed can be delet
 ## Python Script to combine all the files.
 
 Once all the excel files have been standardized to have the table only. We will write a python script to combine them into one excel file.
+### Script 
+
+Install dependancies 
+```
+import pandas as pd
+import os
+```
+
+Specifies the path to a directory where the Excel files are located.
+```
+folder_path = "C:/Users/arnab/OneDrive/Desktop/Dam Excels"
+```
+
+Create a list containing all of the excel files we require. (end with ".xlsx").
+```
+excel_files = [file for file in os.listdir(folder_path) if file.endswith(".xlsx")]
+```
+
+Now we create a loop that starts iterating through each Excel file in the excel_files list.
+Construct a 'file_path' with the full path to the current Excel file.
+We then use the 'read_excel' function and store the files in a data frame.
+Finally, we concatenate the data frames, effectively combining the data from all Excel files. 
+The ignore_index=True argument resets the index after concatenation.
+
+```
+combined_data = pd.DataFrame()
+for file in excel_files:
+    file_path = os.path.join(folder_path, file)
+    data = pd.read_excel(file_path)
+    combined_data = pd.concat([combined_data, data], ignore_index=True)
+```
+
+Specify the output path of the combined file and write the combined data to the specified output file.
+```
+output_file_path ="C:/Users/arnab/combined2.xlsx"
+
+combined_data.to_excel(output_file_path, index=False, engine='xlsxwriter')
+
+print("Combined Excel file saved:", output_file_path)
+```
 
 
 
