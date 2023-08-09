@@ -1,10 +1,10 @@
-# Conversion of the National Registry of Large Dams to a shapefile.
+![image](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/assets/114946929/48651b38-f284-433f-b761-554033d2f1ca)# Conversion of the National Registry of Large Dams to a shapefile.
 
 Data source- [The National Register of Large Dams - 2019](https://cwc.gov.in/sites/default/files/nrld06042019.pdf)
 Pages 41-270 of the registry contains the state-wise distribution with details of each dam. 
 
 ## PDF extraction and conversion using SmallPDF.
-The required pages were from the registry containing our desired information was isolated (Pages 41-270)
+The required pages (Pages 41-270) containing our desired information was isolated
 Find the document [here](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Files/NRLD%20Isolated%20PDF.pdf)
 
 This document with the state-wise list was split state-wise into individual PDFs using the 'Split PDF -> Split 1 PDF into many' tool in SmallPDF.
@@ -98,7 +98,7 @@ For Z
 Apply this to all the coordinates. Our sheet should look something like this.
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Split%20into%20cells.png)
 
-Once done, apply the formula that will convert the coordinates to floating point decimals
+Once done, apply the formula that will convert the coordinates to floating point decimals.
 ```
 =B2 + C2/60 + D2/3600
 ```
@@ -107,6 +107,24 @@ Where B2- Degree, C2- Minutes, D2- Seconds.
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/FinalCoord.png)
 
 Apply this formula across the entire column. Do it for both latitude and longitude. Copy and paste the values back into our original file.
+
+Save our excel file as a CSV File- (Comma delimited) (*.csv)]
+
+## Import into GIS
+We now have our excel file ready to import into our GIS software. I will use QGIS.
+
+Add a Delimited Text Layer
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Add%20Layer.png)
+
+In the dialogue box, specify the file name of our CSV. Under Geometry Definitin, ensure 'Point Coordinates' is selected.
+
+Next to it in the X Field select the column containing Floating Point **Longitude** Values. For the Y Field, the Floating Point **Latitude** Values.
+![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Dialogue.png)
+Make sure the CRS is appropriate (EPSG: 4326 - WGS:84 in this case) and click add.
+
+
+
+
 
 
 
