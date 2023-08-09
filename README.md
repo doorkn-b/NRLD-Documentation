@@ -96,6 +96,7 @@ For Z
 ```
 
 Apply this to all the coordinates. Our sheet should look something like this.
+
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Split%20into%20cells.png)
 
 Once done, apply the formula that will convert the coordinates to floating point decimals.
@@ -119,7 +120,9 @@ Add a Delimited Text Layer
 In the dialogue box, specify the file name of our CSV. Under Geometry Definitin, ensure 'Point Coordinates' is selected.
 
 Next to it in the X Field select the column containing Floating Point **Longitude** Values. For the Y Field, the Floating Point **Latitude** Values.
+
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Dialogue.png)
+
 Make sure the CRS is appropriate (EPSG: 4326 - WGS:84 in this case) and click add.
 
 
