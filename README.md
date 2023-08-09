@@ -86,7 +86,10 @@ We will first split these three into seperate cells next to each other to perfor
 
 Use these formulas to separate them. Considering A3 is the cell our DMS coordinate is present in.
 
+
+
 For X
+
 ```
 =LEFT(A3, FIND("°", A3) - 1)
 ```
