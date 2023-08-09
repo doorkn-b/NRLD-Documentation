@@ -21,7 +21,7 @@ Download and move all the excel files into the folder.
 
 Go through each excel file and remove any discrepancies created during the conversion to excel. Retain the table only
 
-Add a column stating the dam's State/UT. States with no dams listed can be deleted and ignored. The final table looks something like this 
+Add a column stating the dam's State/UT. States with no dams listed can be deleted and ignored. The final table looks something like this.
 ![](https://github.com/doorkn-b/Shapefile-for-NRD-Documentation/blob/main/Documentation%20Images/Final%20Table.png)
 
 ## Python Script to combine all the files.
